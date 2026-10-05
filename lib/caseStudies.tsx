@@ -470,25 +470,32 @@ export const bizpilotSections: CaseStudySection[] = [
           title="Key Workflow Screens"
           screens={[
             {
-              title: 'Confidence Indicator Card',
-              description: 'Shows AI confidence level (%), key risk factors, and visual indicator (green/yellow/red). Users see reasoning on hover.',
+              title: 'AI Recommendation Card',
+              description: 'Shows invoice summary, AI recommendation (Approve/Hold/Escalate), confidence level, and risk assessment. One-click decision interface.',
               aspect: 'square',
               context: 'Primary interaction for understanding AI recommendation',
-              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
+              imageSrc: '/project-screens/bizpilot-ai-recommendation-card.png',
             },
             {
-              title: 'Override Panel',
-              description: 'When user wants to override AI: required text field for reason, dropdown for category (e.g., "vendor history", "cash timing", "strategic decision"), and submit button.',
+              title: 'Transparent Reasoning Panel',
+              description: 'Displays AI logic: which factors were considered, how they were weighted, what signals triggered the recommendation, and historical context.',
               aspect: 'desktop',
-              context: 'Captures feedback to improve AI learning',
-              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
+              context: 'Builds trust through transparency and explainability',
+              imageSrc: '/project-screens/bizpilot-ai-reasoning-panel.png',
             },
             {
-              title: 'Cash Flow Impact Preview',
-              description: 'Shows approval impact on 30-day forecast: "Approving this payment reduces cash by $X on [date]. Current minimum: $Y."',
+              title: 'Quick Approval Button',
+              description: 'Prominent approve button for users who agree with AI recommendation. System automatically logs decision and creates immutable audit trail.',
               aspect: 'square',
-              context: 'Helps users make informed decisions with full visibility',
-              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
+              context: 'Fast path for confident approvals while maintaining compliance',
+              imageSrc: '/project-screens/bizpilot-ai-approval-button.png',
+            },
+            {
+              title: 'Override Workflow',
+              description: 'When user disagrees with AI: modal captures reason for override, decision category, and requires confirmation before proceeding.',
+              aspect: 'desktop',
+              context: 'Collects feedback to improve AI model over time',
+              imageSrc: '/project-screens/bizpilot-ai-override-workflow.png',
             },
           ]}
         />
@@ -898,25 +905,25 @@ export const testguardSections: CaseStudySection[] = [
           title="Key Testing Interface Screens"
           screens={[
             {
-              title: 'Goal Definition Panel',
-              description: 'Where QA engineers write test goals: "Test mobile checkout flow, including error handling for invalid payment info."',
+              title: 'Agent Activity Dashboard',
+              description: 'Real-time visualization showing agent progress percentage, number of findings discovered, exploration paths taken, and control buttons (Pause/Stop).',
               aspect: 'desktop',
-              context: 'Starting point for autonomous test agent',
+              context: 'QA engineers monitor autonomous test execution in real-time',
+              imageSrc: '/project-screens/testguard-agent-dashboard.png',
+            },
+            {
+              title: 'Live Agent Feed',
+              description: 'Continuous captions showing agent actions: "Agent testing form validation → Checking tooltip display → Taking screenshot of issue."',
+              aspect: 'desktop',
+              context: 'Transparency into agent behavior and thought process',
               imageSrc: '/project-screens/testguard-platform.png',
             },
             {
-              title: 'Agent Real-Time Feed',
-              description: 'Live caption of what agent is doing: "Testing form label association... Checking error message visibility... Taking screenshot of issue."',
-              aspect: 'desktop',
-              context: 'Humans watch agent progress in real-time',
-              imageSrc: '/project-screens/testguard-platform.png',
-            },
-            {
-              title: 'Finding Evidence Card',
-              description: 'Issue captured with: video clip of the bug, reproduction steps, severity level, suggested action, and QA approval checkbox.',
+              title: 'Critical Finding Panel',
+              description: 'Issue report with severity indicator, technical description, affected scope, evidence link, and one-click approval to file bug.',
               aspect: 'square',
-              context: 'Agent reports findings with proof, not guesses',
-              imageSrc: '/project-screens/testguard-platform.png',
+              context: 'Agent reports findings with proof and context, not just pass/fail',
+              imageSrc: '/project-screens/testguard-findings-panel.png',
             },
           ]}
         />
