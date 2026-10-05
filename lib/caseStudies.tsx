@@ -494,6 +494,7 @@ export const bizpilotSections: CaseStudySection[] = [
           title="Approval Dashboard"
           description="Main workspace where finance users review invoice batches with AI recommendations, make approve/hold/escalate decisions, and track cash flow impact."
           placeholder="Invoice Approval Dashboard with AI Recommendations"
+          imageSrc="/project-screens/bizpilot-ai-dashboard.png"
           variant="desktop"
         />
 
@@ -953,6 +954,7 @@ export const testguardSections: CaseStudySection[] = [
           title="Agent Activity Dashboard"
           description="Real-time view of test execution showing agent progress, exploration paths, findings collected, and live control panel for pause/stop."
           placeholder="TestGuard Live Agent Monitoring Dashboard"
+          imageSrc="/project-screens/testguard-platform.png"
           variant="desktop"
         />
 
