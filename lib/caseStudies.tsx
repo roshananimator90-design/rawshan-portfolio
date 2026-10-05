@@ -4,7 +4,6 @@ import {
   UXFlow,
   AIArchitecture,
   UserJourneyMap,
-  UIShowcase,
   KeyDecisions,
 } from '@/components/CaseStudyVisuals';
 import {
@@ -447,41 +446,6 @@ export const bizpilotSections: CaseStudySection[] = [
           ]}
         />
 
-        {/* UI Components Showcase */}
-        <UIShowcase
-          components={[
-            {
-              title: 'AI Recommendation Card',
-              description: 'Shows invoice summary, AI recommendation (Approve/Hold/Escalate) with confidence score, key risk factors highlighted, and one-click override option.',
-              type: 'card',
-            },
-            {
-              title: 'Transparent Reasoning Panel',
-              description: 'Displays AI logic: which factors were considered, how they were weighted, what signals triggered the recommendation.',
-              type: 'flow',
-            },
-            {
-              title: 'Quick Approval Button',
-              description: 'Prominent approve/hold/escalate buttons. One click executes decision. System logs user decision and creates audit trail automatically.',
-              type: 'button',
-            },
-            {
-              title: 'Override Workflow',
-              description: 'When user overrides AI, system captures reason ("missed vendor history", "different cash timing", etc). Reasoning feeds back to AI training.',
-              type: 'modal',
-            },
-            {
-              title: 'Cash Flow Impact Preview',
-              description: 'Shows user how approval affects forecast: "This payment will reduce 30-day cash by $X, bringing you to $Y minimum on [date]."',
-              type: 'state',
-            },
-            {
-              title: 'Audit Trail & History',
-              description: 'Immutable log showing every decision (AI recommendation, user action, override reason, timestamp, approver) for compliance and learning.',
-              type: 'flow',
-            },
-          ]}
-        />
       </>
     ),
   },
@@ -510,18 +474,21 @@ export const bizpilotSections: CaseStudySection[] = [
               description: 'Shows AI confidence level (%), key risk factors, and visual indicator (green/yellow/red). Users see reasoning on hover.',
               aspect: 'square',
               context: 'Primary interaction for understanding AI recommendation',
+              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
             },
             {
               title: 'Override Panel',
               description: 'When user wants to override AI: required text field for reason, dropdown for category (e.g., "vendor history", "cash timing", "strategic decision"), and submit button.',
               aspect: 'desktop',
               context: 'Captures feedback to improve AI learning',
+              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
             },
             {
               title: 'Cash Flow Impact Preview',
               description: 'Shows approval impact on 30-day forecast: "Approving this payment reduces cash by $X on [date]. Current minimum: $Y."',
               aspect: 'square',
               context: 'Helps users make informed decisions with full visibility',
+              imageSrc: '/project-screens/bizpilot-ai-dashboard.png',
             },
           ]}
         />
@@ -907,41 +874,6 @@ export const testguardSections: CaseStudySection[] = [
           ]}
         />
 
-        {/* UI Showcase */}
-        <UIShowcase
-          components={[
-            {
-              title: 'Live Agent Dashboard',
-              description: 'Shows each agent in real-time: current action, app state, progress through test goal. Click any agent to see full execution history.',
-              type: 'card',
-            },
-            {
-              title: 'Goal Editor',
-              description: 'QA writes test goals in natural language. AI parses goals and suggests test cases. QA can add constraints ("Use test data only").',
-              type: 'input',
-            },
-            {
-              title: 'Real-Time Agent Feed',
-              description: 'Live video of agent interacting with app. Shows clicks, form inputs, app responses. QA watches or skips to findings.',
-              type: 'flow',
-            },
-            {
-              title: 'Pause/Stop Controls',
-              description: 'Prominent pause and stop buttons. Agents respond instantly. Paused agents can resume or be terminated.',
-              type: 'button',
-            },
-            {
-              title: 'Finding with Evidence',
-              description: 'Each finding shows: title, severity, video clip of issue, reproduction steps, suggested action, QA approval checkbox.',
-              type: 'state',
-            },
-            {
-              title: 'Agent Escalation',
-              description: 'When agent is uncertain (ambiguous UI, unclear expected behavior), it escalates with context: "Here\'s what I tried, I\'m unsure of expected outcome."',
-              type: 'modal',
-            },
-          ]}
-        />
       </>
     ),
   },
@@ -970,18 +902,21 @@ export const testguardSections: CaseStudySection[] = [
               description: 'Where QA engineers write test goals: "Test mobile checkout flow, including error handling for invalid payment info."',
               aspect: 'desktop',
               context: 'Starting point for autonomous test agent',
+              imageSrc: '/project-screens/testguard-platform.png',
             },
             {
               title: 'Agent Real-Time Feed',
               description: 'Live caption of what agent is doing: "Testing form label association... Checking error message visibility... Taking screenshot of issue."',
               aspect: 'desktop',
               context: 'Humans watch agent progress in real-time',
+              imageSrc: '/project-screens/testguard-platform.png',
             },
             {
               title: 'Finding Evidence Card',
               description: 'Issue captured with: video clip of the bug, reproduction steps, severity level, suggested action, and QA approval checkbox.',
               aspect: 'square',
               context: 'Agent reports findings with proof, not guesses',
+              imageSrc: '/project-screens/testguard-platform.png',
             },
           ]}
         />
@@ -1363,41 +1298,6 @@ export const clinisightSections: CaseStudySection[] = [
           ]}
         />
 
-        {/* UI Components */}
-        <UIShowcase
-          components={[
-            {
-              title: 'Screenshot Analyzer',
-              description: 'Upload area with drag-drop support. Context tags (workflow, patient type, device). AI analyzes in real-time.',
-              type: 'input',
-            },
-            {
-              title: 'Finding Card with Evidence',
-              description: 'Shows: highlighted region on screenshot, WCAG rule, clinical impact, fix recommendation, QA verification checkbox.',
-              type: 'card',
-            },
-            {
-              title: 'Verification Decision Panel',
-              description: 'QA confirms/dismisses finding, adds clinical context, sets priority (critical/high/medium/low).',
-              type: 'modal',
-            },
-            {
-              title: 'Compliance Audit Log',
-              description: 'Complete history: finding, QA decision, timestamp, rationale, team member. Exportable for compliance audits.',
-              type: 'flow',
-            },
-            {
-              title: 'Trend & Pattern Report',
-              description: 'Aggregate findings by category, shows improvement over sprints, identifies systemic issues.',
-              type: 'state',
-            },
-            {
-              title: 'Education Module',
-              description: 'Each finding includes explanation, WCAG reference, fix examples, and links to accessibility resources.',
-              type: 'flow',
-            },
-          ]}
-        />
       </>
     ),
   },
@@ -1822,41 +1722,6 @@ export const revflowSections: CaseStudySection[] = [
           ]}
         />
 
-        {/* UI Components for Revenue Cycle */}
-        <UIShowcase
-          components={[
-            {
-              title: 'Claims Dashboard',
-              description: 'Sorted by deadline urgency first, then claim value. Shows denial reason, AI recommendation, success rate for similar claims.',
-              type: 'card',
-            },
-            {
-              title: 'Claim Detail with AI Facts',
-              description: 'Shows: claim info, denial reason, pattern analysis ("77% similar claims appealed successfully"), payer history, recommended arguments.',
-              type: 'state',
-            },
-            {
-              title: 'Appeal Composition Panel',
-              description: 'Human-written appeals with AI-surfaced facts and recommended arguments. AI never auto-generates; human always writes.',
-              type: 'modal',
-            },
-            {
-              title: 'Deadline Alert & Tracking',
-              description: 'Prominent deadline display. Reminders at 7 days, 3 days, 1 day. Appeals tracked to submission confirmation.',
-              type: 'flow',
-            },
-            {
-              title: 'Revenue Forecast Calendar',
-              description: 'Shows predicted resolution dates for active claims, flagging high-risk reversals. CFO uses for financial forecasting.',
-              type: 'state',
-            },
-            {
-              title: 'Compliance Audit Trail',
-              description: 'Complete history: claim, denial, AI recommendation, human decision (with approval date/user), appeal submission, resolution.',
-              type: 'flow',
-            },
-          ]}
-        />
       </>
     ),
   },
@@ -2274,42 +2139,6 @@ export const careNeuSections: CaseStudySection[] = [
             },
           ]}
         />
-
-        {/* UI Showcase */}
-        <UIShowcase
-          components={[
-            {
-              title: 'Patient Dashboard',
-              description: 'Shows: Health status at a glance, upcoming appointments, medication reminders, trending metrics, alerts from care team.',
-              type: 'card',
-            },
-            {
-              title: 'Provider View',
-              description: 'Shows: Patient vitals and trends, recent events, upcoming appointments, pending coordination tasks, alert history.',
-              type: 'state',
-            },
-            {
-              title: 'Care Coordination Panel',
-              description: 'Agents surface: "Blood pressure trending high", "Endocrinologist should see latest A1C", "Schedule follow-up needed".',
-              type: 'flow',
-            },
-            {
-              title: 'Medication Reminder',
-              description: 'Smart reminder: time, dose, reason ("Controls your blood pressure"), easy confirm/snooze, optional note-taking.',
-              type: 'button',
-            },
-            {
-              title: 'Health Trend Visualization',
-              description: 'Shows patient vitals over time with AI insights: "Blood pressure trending up over 2 weeks", "On track with diet goals".',
-              type: 'state',
-            },
-            {
-              title: 'Async Message Thread',
-              description: 'Patient asks question, provider responds within 24hrs, AI surfaces context (recent tests, meds, history).',
-              type: 'flow',
-            },
-          ]}
-        />
       </>
     ),
   },
@@ -2605,42 +2434,6 @@ export const enterpriseSections: CaseStudySection[] = [
               considered: ['Strict linear', 'Free-form jumping', 'Smart recommendations', 'Power-user shortcuts'],
               chosen: 'Linear default with power-user shortcuts',
               reasoning: 'Novices need guidance; experts need speed. Show happy path for new users. Keyboard shortcuts and advanced navigation for experienced operators. Both groups in one UI.',
-            },
-          ]}
-        />
-
-        {/* Enterprise UI Showcase */}
-        <UIShowcase
-          components={[
-            {
-              title: 'Design System Component Library',
-              description: 'Shared components: Buttons, Inputs, Tables, Charts, Modals serving 50+ product teams. Semantic tokens for colors, spacing, typography.',
-              type: 'card',
-            },
-            {
-              title: 'Real-Time Payment Dashboard',
-              description: 'Shows money in motion: transaction volume, geographic distribution, status, exceptions. Drill-down to individual transactions with full audit trail.',
-              type: 'state',
-            },
-            {
-              title: 'Healthcare Analytics Dashboard',
-              description: 'Correlates patient interventions to outcomes. Shows trends, cohort comparisons, risk scores. Different views for clinician, analyst, hospital admin.',
-              type: 'state',
-            },
-            {
-              title: 'Supply Chain Visibility Map',
-              description: 'Real-time location and status of shipments. Heat map showing bottlenecks. Risk indicators for delays. Drill-down to shipment details.',
-              type: 'flow',
-            },
-            {
-              title: 'Complex Workflow Builder',
-              description: 'Define non-linear workflows for payment processing, claims handling, settlements. Visual builder with drag-drop, condition logic, approval gates.',
-              type: 'modal',
-            },
-            {
-              title: 'Role-Based Layout System',
-              description: 'Same data, different layouts: Executive (summary KPIs), Analyst (detailed trends), Operator (action-oriented). Switch views instantly.',
-              type: 'flow',
             },
           ]}
         />
